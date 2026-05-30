@@ -70,3 +70,6 @@ new-setup.md
 # API test request files
 requests.http
 *.http
+
+# Local documents files
+docs/
