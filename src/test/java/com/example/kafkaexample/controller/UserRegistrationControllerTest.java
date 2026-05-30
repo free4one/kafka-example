@@ -2,6 +2,7 @@ package com.example.kafkaexample.controller;
 
 import com.example.kafkaexample.dto.UserRegistrationRequest;
 import com.example.kafkaexample.producer.UserRegistrationProducer;
+import com.example.kafkaexample.service.UserRegistrationService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ class UserRegistrationControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @MockitoBean
+    private UserRegistrationService userRegistrationService;
 
     @MockitoBean
     private UserRegistrationProducer userRegistrationProducer;

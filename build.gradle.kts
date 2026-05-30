@@ -63,15 +63,19 @@ tasks.jacocoTestReport {
         csv.required.set(false)
     }
 
-    classDirectories.setFrom(files(classDirectories.files.map {
-        fileTree(it) {
-            exclude(
-                "**/config/**",
-                "**/dto/**",
-                "**/entity/**"
-            )
-        }
-    }))
+    classDirectories.setFrom(
+        files(
+            classDirectories.files.map {
+                fileTree(it) {
+                    exclude(
+                        "**/config/**",
+                        "**/dto/**",
+                        "**/entity/**",
+                    )
+                }
+            },
+        ),
+    )
 }
 
 tasks.jacocoTestCoverageVerification {
