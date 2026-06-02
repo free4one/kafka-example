@@ -67,6 +67,7 @@ REVIEWER.md
 _temp/
 new-setup.md
 ~/
+.qmd/
 
 # API test request files
 requests.http
